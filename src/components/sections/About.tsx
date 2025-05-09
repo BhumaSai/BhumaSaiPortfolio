@@ -19,7 +19,7 @@ const About: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2">
-            <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg border-4 border-white dark:border-gray-700 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-lg border-4 border-white dark:border-gray-700 transform scale-100 hover:scale-95 transition-transform duration-500">
               <img 
                 src={about} 
                 alt="Developer Profile" 
@@ -28,7 +28,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 text-justify">
             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
               A Passionate Full Stack Web Developer & Security Enthusiast
             </h3>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
 
             <a 
               href={Resume}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="lg:inline-flex max-md:flex items-center justify-center content-center max-sm:min-w-full  px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium rounded-lg shadow-md hover:scale-95 transition-shadow "
             download="Bhuma_Sai_Full_Stack_Developer_Resume.pdf">
               Download Resume
             </a>

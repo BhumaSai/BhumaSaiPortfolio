@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-100 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0 max-md:flex flex-col items-center justify-center">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 font-mono">BhumaSai</h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-md">
               Full Stack Web Developer with a passion for web development 
