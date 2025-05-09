@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-6xl md:text-6xl font-bold mb-4">
             Hello, I'm <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Bhuma Sai</span>
           </h1>
           
