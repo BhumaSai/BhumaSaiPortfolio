@@ -72,7 +72,7 @@ const Skills: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mb-10 overflow-x-auto pb-2">
+        <div className="flex  justify-evenly mb-10 overflow-x-auto pb-2">
           <div className="flex space-x-2">
             {categories.map(category => (
               <button

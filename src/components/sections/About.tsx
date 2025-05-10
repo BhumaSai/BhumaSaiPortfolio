@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen } from 'lucide-react';
-import about from "../../Assets/about.jpg";
+import about from "../../Assets/about.webp";
 import Resume from "../../Assets/Bhuma_Sai_Full_Stack_Developer_Resume.pdf"
 
 const About: React.FC = () => {

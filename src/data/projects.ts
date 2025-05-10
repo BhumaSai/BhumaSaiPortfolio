@@ -1,8 +1,8 @@
 import { Project } from "../types";
-import chat_app from "../Assets/chat_app.png";
-import shop from "../Assets/shop.png";
-import taskmangement from "../Assets/taskmanagement.png";
-import malicious from "../Assets/malicious.png";
+import chat_app from "../Assets/chat_app.webp";
+import shop from "../Assets/shop.webp";
+import taskmangement from "../Assets/taskmanagement.webp";
+import malicious from "../Assets/malicious.webp";
 
 export const projects: Project[] = [
   {
