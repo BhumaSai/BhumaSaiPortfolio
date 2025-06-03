@@ -100,7 +100,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="flex justify-center mb-12 overflow-x-auto pb-2">
-          <div className="flex space-x-2">
+          <div className="flex overflow-auto space-x-2">
             {categories.map(category => (
               <button
                 key={category.id}
