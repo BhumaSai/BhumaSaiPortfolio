@@ -34,7 +34,7 @@ const About: React.FC = () => {
             </h3>
             
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a recent Post Graduate with a strong foundation in full stack web development and a deep interest in cybersecurity. 
+              I'm a recent Post Graduate with a strong foundation in full stack web development and deep interest in cybersecurity. 
               My journey began with HTML, CSS, and JavaScript, and has evolved to include modern frameworks and security practices.
             </p>
             
