@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0 max-md:flex flex-col items-center justify-center">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 font-mono">BhumaSai</h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-md">
-              Full Stack Web Developer with a passion for web development 
+              Full Stack Developer with a passion for creating innovative web solutions 
             </p>
           </div>
           
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://www.linked.com/in/bhuma-sai" 
+                href="https://www.linkedin.com/in/bhuma-sai" 
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                 aria-label="LinkedIn"
               >
