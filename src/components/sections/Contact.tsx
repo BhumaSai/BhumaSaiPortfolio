@@ -68,18 +68,17 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold relative inline-block mb-3">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
             Get In Touch
-            <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? Feel free to reach out!
+          <p className="text-sm text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            I'm currently seeking entry-level opportunities. Have something that might be a good fit? I'd be happy to hear from you!
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
-          <div className="lg:w-2/5">
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg h-full">
+        <div className="flex flex-col lg:flex-row gap-12 ">
+          <div className="lg:w-2/5 rounded-2xl"  style={{boxShadow:"0px 0px 19px #000000d5"}}>
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl h-full">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Fill out the form or contact me directly using the information below.
@@ -101,7 +100,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
+                <div className="flex items-start ">
                   <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400 mr-4">
                     <MessageSquare size={20} />
                   </div>
@@ -148,8 +147,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div className="lg:w-3/5">
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg">
+          <div className="lg:w-3/5 rounded-2xl "  style={{boxShadow:"0px 0px 19px #000"}}>
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl">
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full mb-6">
@@ -225,7 +224,7 @@ const Contact: React.FC = () => {
                       className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
                         errors.subject ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
                       } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors`}
-                      placeholder="Project Inquiry"
+                      placeholder="Subject"
                     />
                     {errors.subject && (
                       <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
@@ -245,7 +244,7 @@ const Contact: React.FC = () => {
                       className={`w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border ${
                         errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
                       } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none`}
-                      placeholder="Tell me about your project or inquiry..."
+                      placeholder="Type message here..."
                     ></textarea>
                     {errors.message && (
                       <p className="mt-1 text-sm text-red-500">{errors.message}</p>

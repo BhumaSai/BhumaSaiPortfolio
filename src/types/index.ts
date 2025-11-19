@@ -6,7 +6,7 @@ export interface Project {
   imageUrl: string;
   demoUrl?: string;
   githubUrl?: string;
-  category: "live" | "in-active";
+  category: "live" | "repo";
 }
 
 export interface Skill {

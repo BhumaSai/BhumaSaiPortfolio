@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const typingRef = useRef<HTMLSpanElement>(null);
   
   useEffect(() => {
-    const phrases = ['Full Stack Web Developer', 'Security Enthusiast', 'Web Pentester'];
+    const phrases = ['Full Stack Web Developer', 'Security Enthusiast'];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
@@ -32,12 +32,12 @@ const Hero: React.FC = () => {
         
         if (currentCharIndex === currentPhrase.length) {
           isDeleting = true;
-          typeTimer = window.setTimeout(type, 1500); // Pause at end of phrase
+          typeTimer = window.setTimeout(type, 1500);
           return;
         }
       }
       
-      const typingSpeed = isDeleting ? 50 : 100; // Faster when deleting
+      const typingSpeed = isDeleting ? 50 : 100; 
       typeTimer = window.setTimeout(type, typingSpeed);
     };
 
@@ -48,27 +48,6 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 z-0 opacity-5 dark:opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute bg-blue-600 rounded-full"
-              style={{
-                width: `${Math.random() * 300 + 50}px`,
-                height: `${Math.random() * 300 + 50}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                opacity: 0.2,
-                animation: `float ${Math.random() * 10 + 10}s infinite ease-in-out`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
       <div className="container mx-auto px-4 z-10">
         <div className="text-center">
           <div className="flex justify-center mb-6 space-x-4">
@@ -83,7 +62,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl sm:text-6xl md:text-6xl font-bold mb-4">
+          <h1 className="right text-4xl sm:text-6xl md:text-6xl font-bold mb-4">
             Hello, I'm <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Bhuma Sai</span>
           </h1>
           
@@ -92,16 +71,16 @@ const Hero: React.FC = () => {
             <span className="animate-blink">|</span>
           </h2>
           
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10">
+          <p className="left text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10">
             Passionate about building secure, robust web applications .
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
+              className="px-8 py-3 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600/10 font-medium rounded-lg transition-colors"
             >
-              View My Work
+              View My Projects
             </a>
             <a
               href="#contact"

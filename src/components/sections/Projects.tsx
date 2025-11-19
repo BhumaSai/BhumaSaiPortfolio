@@ -6,17 +6,20 @@ import { ExternalLink, Github, Code } from 'lucide-react';
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col group">
+    <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col group"  style={{boxShadow:"0px 0px 19px #000"}}>
       <div className="relative overflow-hidden">
-        <img 
-          src={project.imageUrl} 
-          alt={project.title}
-          className="w-full h-48 object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-        />
+        {
+          project.imageUrl !== "#"?
+          <img 
+            src={project.imageUrl} 
+            alt={project.title}
+            className="w-full h-48 object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+          />:<Code className='w-full h-48 group-hover:scale-105 transition-transform duration-500 bg-black bg-gradient-to-r from-gray-900 to-gray-800 '/>
+        }
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
           <div className="p-4 w-full">
             <div className="flex justify-end space-x-3">
-              {project.demoUrl && (
+              {project.demoUrl && project.demoUrl !== "#" && (
                 <a 
                   href={project.demoUrl} 
                   className="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors" 
@@ -53,7 +56,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mt-auto">
-          {project.technologies.slice(0, 3).map((tech) => (
+          <h4 className='font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent'>Tech Stack - </h4><br />
+          {project.technologies.map((tech) => (
             <span 
               key={tech} 
               className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded-md"
@@ -61,11 +65,6 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               {tech}
             </span>
           ))}
-          {project.technologies.length > 3 && (
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded-md">
-              +{project.technologies.length - 3} more
-            </span>
-          )}
         </div>
       </div>
     </div>
@@ -77,8 +76,8 @@ const Projects: React.FC = () => {
   
   const categories = [
     { id: 'all', label: 'All Projects' },
-    { id: 'live', label: 'Active Projects' },
-    {id:'in-active',label:"In Active Projects"}
+    { id: 'live', label: 'Live Projects' },
+    { id: 'repo', label: 'Repository' },
 
   ];
 
@@ -90,9 +89,8 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold relative inline-block mb-3">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
             My Projects
-            <div className="absolute  top-10 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Explore my latest web development  projects

@@ -51,7 +51,6 @@ const Skills: React.FC = () => {
     { id: 'frontend', label: 'Frontend' },
     { id: 'backend', label: 'Backend' },
     { id: 'database', label: 'Database' },
-    { id: 'security', label: 'Security' },
     { id: 'other', label: 'Other' },
   ];
 
@@ -63,9 +62,8 @@ const Skills: React.FC = () => {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold relative inline-block mb-3">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-900 to-cyan-300 bg-clip-text text-transparent">
             My Skills
-            <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and expertise in various technologies.

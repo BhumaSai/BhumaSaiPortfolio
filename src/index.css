@@ -72,3 +72,34 @@ body {
     opacity: 0;
   }
 }
+
+
+.right {
+  transform: translateX(0);
+  animation: right .5s linear;
+}
+
+@keyframes right {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.left {
+  transform: translateX(0);
+  animation: left .5s linear;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

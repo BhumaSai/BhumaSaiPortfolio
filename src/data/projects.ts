@@ -1,7 +1,6 @@
 import { Project } from "../types";
 import chat_app from "../Assets/chat_app.webp";
 import shop from "../Assets/shop.webp";
-import taskmangement from "../Assets/taskmanagement.webp";
 import malicious from "../Assets/malicious.webp";
 
 export const projects: Project[] = [
@@ -28,22 +27,33 @@ export const projects: Project[] = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce application with secure user authentication.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT"],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "mongoose", "JWT"],
     imageUrl: shop,
     demoUrl: "https://feshopping.vercel.app/",
     githubUrl: "https://github.com/BhumaSai/e_commerce",
     category: "live",
   },
   {
-    id: "task-management",
-    title: "Task_Mangement",
+    id: "url-shortner",
+    title: "Url Shortner",
     description:
-      "A simple, intuitive web app to track user tasks—effortlessly organize to-dos without the clutter",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "mongoose", "JWT"],
-    imageUrl: taskmangement,
+      "A simple Spring Boot application which generates shortened URLs and provides analytics endpoints",
+    technologies: ["Java", "Spring Boot", "MySQL", "Maven"],
+    imageUrl: "#",
     demoUrl: "#",
-    githubUrl: "https://github.com/BhumaSai/taskmangement",
-    category: "in-active",
+    githubUrl: "https://github.com/BhumaSai/UrlShortner",
+    category: "repo",
+  },
+  {
+    id: "todoapp",
+    title: "ToDo App",
+    description:
+      "A lightweight and efficient To-Do application with a Go (Gin) backend and a clean React frontend for managing daily tasks.",
+    technologies: ["Go", "Gin", "MySQL", "JWT"],
+    imageUrl: "#",
+    demoUrl: "#",
+    githubUrl: "https://github.com/BhumaSai/todoapp",
+    category: "repo",
   },
   {
     id: "Malicious-Url-detection",
@@ -54,6 +64,6 @@ export const projects: Project[] = [
     imageUrl: malicious,
     demoUrl: "#",
     githubUrl: "https://github.com/BhumaSai/Project",
-    category: "in-active",
+    category: "repo",
   },
 ];

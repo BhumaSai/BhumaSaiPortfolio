@@ -14,7 +14,7 @@ export const skills: Skill[] = [
     category: "frontend",
     proficiency: 5,
   },
-  { name: "React", icon: "CodeIcon", category: "frontend", proficiency: 4 },
+  { name: "React", icon: "CodeIcon", category: "frontend", proficiency: 5 },
   {
     name: "TypeScript",
     icon: "CodeIcon",
@@ -28,10 +28,18 @@ export const skills: Skill[] = [
     proficiency: 4,
   },
   // Backend
+  { name: "Python", icon: "CodeIcon", category: "backend", proficiency: 5 },
+  { name: "Java", icon: "CodeIcon", category: "backend", proficiency: 4 },
+  { name: "Go", icon: "CodeIcon", category: "backend", proficiency: 3 },
   { name: "Node.js", icon: "ServerIcon", category: "backend", proficiency: 5 },
   { name: "Express", icon: "ServerIcon", category: "backend", proficiency: 5 },
-  { name: "Python", icon: "CodeIcon", category: "backend", proficiency: 4 },
-  { name: "DJANGO", icon: "CodeIcon", category: "backend", proficiency: 3 },
+  { name: "Flask", icon: "CodeIcon", category: "backend", proficiency: 4 },
+  {
+    name: "Spring Boot",
+    icon: "CodeIcon",
+    category: "backend",
+    proficiency: 4,
+  },
   {
     name: "RESTful APIs",
     icon: "ServerIcon",
@@ -50,37 +58,15 @@ export const skills: Skill[] = [
     name: "MySql",
     icon: "DatabaseIcon",
     category: "database",
-    proficiency: 4,
+    proficiency: 5,
   },
-  // Security
-  {
-    name: "Ethical Hacking",
-    icon: "ShieldIcon",
-    category: "security",
-    proficiency: 3,
-  },
-  {
-    name: "Web App Penetration Testing",
-    icon: "ShieldIcon",
-    category: "security",
-    proficiency: 3,
-  },
-  {
-    name: "Networking",
-    icon: "NetworkIcon",
-    category: "security",
-    proficiency: 4,
-  },
-  { name: "Burp Suite", icon: "BugIcon", category: "security", proficiency: 3 },
-
-  // Other
   { name: "Git", icon: "GitBranchIcon", category: "other", proficiency: 5 },
   { name: "GitHub", icon: "GitHub", category: "other", proficiency: 5 },
   {
     name: "LinuxOs",
     icon: "Monitor",
     category: "other",
-    proficiency: 3,
+    proficiency: 5,
   },
-  { name: "CI/CD", icon: "RefreshCcwIcon", category: "other", proficiency: 3 },
+  { name: "CI/CD", icon: "RefreshCcwIcon", category: "other", proficiency: 4 },
 ];
