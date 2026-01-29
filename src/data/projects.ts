@@ -29,9 +29,9 @@ export const projects: Project[] = [
       "A full-stack e-commerce application with secure user authentication.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "mongoose", "JWT"],
     imageUrl: shop,
-    demoUrl: "https://feshopping.vercel.app/",
+    demoUrl: "#",
     githubUrl: "https://github.com/BhumaSai/e_commerce",
-    category: "live",
+    category: "repo",
   },
   {
     id: "url-shortner",

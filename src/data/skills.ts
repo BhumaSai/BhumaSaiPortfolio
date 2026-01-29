@@ -30,7 +30,7 @@ export const skills: Skill[] = [
   // Backend
   { name: "Python", icon: "CodeIcon", category: "backend", proficiency: 5 },
   { name: "Java", icon: "CodeIcon", category: "backend", proficiency: 4 },
-  { name: "Go", icon: "CodeIcon", category: "backend", proficiency: 3 },
+  // { name: "Go", icon: "CodeIcon", category: "backend", proficiency: 3 },
   { name: "Node.js", icon: "ServerIcon", category: "backend", proficiency: 5 },
   { name: "Express", icon: "ServerIcon", category: "backend", proficiency: 5 },
   { name: "Flask", icon: "CodeIcon", category: "backend", proficiency: 4 },
@@ -68,5 +68,5 @@ export const skills: Skill[] = [
     category: "other",
     proficiency: 5,
   },
-  { name: "CI/CD", icon: "RefreshCcwIcon", category: "other", proficiency: 4 },
+  // { name: "CI/CD", icon: "RefreshCcwIcon", category: "other", proficiency: 4 },
 ];
