@@ -67,14 +67,14 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+    <nav className={`fixed w-full z-50 ${scrolled
       ? 'glass py-3 shadow-lg'
       : 'bg-transparent py-5'
       }`}>
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           <a href="#home" className="group flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center text-white shadow-lg">
               <span className="font-bold text-xl">B</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent hidden sm:block">
@@ -91,7 +91,6 @@ const Navbar: React.FC = () => {
                   left: `${indicatorStyle.left}px`,
                   width: `${indicatorStyle.width}px`,
                   opacity: indicatorStyle.opacity,
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                 }}
               />
               {navItems.map((item) => (
@@ -99,7 +98,7 @@ const Navbar: React.FC = () => {
                   key={item.label}
                   href={item.href}
                   ref={(el) => (navRefs.current[item.id] = el)}
-                  className={`relative z-10 px-5 py-2 text-sm font-medium transition-colors duration-300 ${activeSection === item.id
+                  className={`relative z-10 px-5 py-2 text-sm font-medium ${activeSection === item.id
                     ? 'text-blue-600 dark:text-blue-400'
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                     }`}
@@ -113,7 +112,7 @@ const Navbar: React.FC = () => {
 
             <button
               onClick={toggleTheme}
-              className="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 transition-all duration-300 active:scale-95"
+              className="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 active:scale-95"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -131,7 +130,7 @@ const Navbar: React.FC = () => {
             </button>
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 active:scale-90 transition-transform"
+              className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 active:scale-90"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -142,7 +141,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute w-full transition-all duration-500 ease-in-out ${isOpen ? 'top-full opacity-100 visible' : 'top-[120%] opacity-0 invisible'
+        className={`md:hidden absolute w-full ${isOpen ? 'top-full opacity-100 visible' : 'top-[120%] opacity-0 invisible'
           }`}
       >
         <div className="mx-4 mt-2 p-4 glass rounded-2xl shadow-xl border border-white/20 dark:border-gray-800/50">
@@ -151,7 +150,7 @@ const Navbar: React.FC = () => {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className={`block px-4 py-3 rounded-xl font-medium transition-all ${activeSection === item.id
+                  className={`block px-4 py-3 rounded-xl font-medium ${activeSection === item.id
                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                     }`}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-50 dark:bg-gray-900 rounded-2xl text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-gray-800 shadow-sm transition-all duration-300 transform hover:-translate-y-1"
+                className="p-3 bg-gray-50 dark:bg-gray-900 rounded-2xl text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-gray-800 shadow-sm transform hover:-translate-y-1"
                 aria-label={social.label}
               >
                 {social.icon}
