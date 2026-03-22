@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="hero box relative min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section id="home" className="hero-transparent relative min-h-[100vh] w-full flex items-center justify-center pt-20 overflow-hidden transition-colors duration-300">
 
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col items-center text-center">
@@ -59,9 +59,9 @@ const Hero: React.FC = () => {
             <span className="text-sm font-bold tracking-wide uppercase">Open for Opportunities</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-8 tracking-tight animate-slideInUp leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tight animate-slideInUp leading-[1.1] text-gray-900 dark:text-white drop-shadow-sm">
             Passionate Full-Stack Developer <br />
-            <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600 bg-clip-text text-transparent">Ready to Innovate</span>
+            <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 bg-clip-text text-transparent animate-pulse">Ready to Innovate</span>
           </h1>
 
           <div className="flex flex-col items-center mb-12 space-y-6 animate-slideInUp" style={{ animationDelay: '0.1s' }}>
@@ -80,14 +80,15 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slideInUp" style={{ animationDelay: '0.2s' }}>
             <a
               href="#projects"
-              className="group px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-500/15 hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center space-x-2"
+              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center space-x-2 relative overflow-hidden"
             >
-              <span>View My Work</span>
-              <ChevronDown className="group-hover:translate-y-1 transition-transform" size={20} />
+              <div className="absolute inset-0 bg-white/20 group-hover:translate-x-full -translate-x-full transition-transform duration-700 ease-in-out skew-x-12" />
+              <span className="relative z-10">View My Work</span>
+              <ChevronDown className="relative z-10 group-hover:translate-y-1 transition-transform" size={20} />
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-white dark:bg-gray-900/50 backdrop-blur-md text-gray-900 dark:text-white font-bold rounded-2xl border-2 border-gray-100 dark:border-gray-800 hover:border-blue-600 dark:hover:border-blue-500 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-white/50 dark:bg-gray-900/50 backdrop-blur-xl text-gray-900 dark:text-white font-bold rounded-2xl border-2 border-transparent hover:border-blue-500 dark:hover:border-blue-400 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] active:scale-95 transition-all duration-300 shadow-lg"
             >
               Get in Touch
             </a>

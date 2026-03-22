@@ -7,7 +7,7 @@ const About: React.FC = () => {
 
 
   return (
-    <section id="about" className="about py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-950">
+    <section id="about" className="about py-24 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent mb-4">
@@ -41,8 +41,9 @@ const About: React.FC = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="p-8 bg-white/70 dark:bg-gray-800/40 backdrop-blur-xl rounded-[2rem] border border-white/40 dark:border-gray-700/50 shadow-2xl shadow-purple-500/5 group">
-                  <div className="w-14 h-14 bg-purple-50 dark:bg-purple-900/20 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:bg-purple-600 group-hover:text-white">
+                <div className="p-8 bg-white/60 dark:bg-gray-800/50 backdrop-blur-2xl rounded-[2.5rem] border border-white/60 dark:border-white/10 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+                  <div className="relative z-10 w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-500 shadow-sm">
                     <BookOpen size={28} />
                   </div>
                   <h4 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Education</h4>

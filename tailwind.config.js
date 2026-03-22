@@ -5,7 +5,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Main brand colors
         primary: {
           50: '#e6f1fe',
           100: '#ccdffc',
@@ -18,28 +17,37 @@ export default {
           800: '#002761',
           900: '#001431',
         },
-        // Accent colors
-        accent: {
-          50: '#e6fbfe',
-          100: '#ccf7fd',
-          200: '#99eefc',
-          300: '#66e6fa',
-          400: '#33ddf9',
-          500: '#00d5f8',
-          600: '#00a7c6',
-          700: '#007d95',
-          800: '#005263',
-          900: '#002932',
-        }
       },
       animation: {
         blink: 'blink 1s step-end infinite',
+        blob: 'blob 7s infinite',
+        float: 'float 6s ease-in-out infinite',
+        slideInUp: 'slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        glow: 'glow 3s ease-in-out infinite alternate',
       },
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0 },
         },
+        blob: {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        slideInUp: {
+          '0%': { transform: 'translateY(40px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 20px 0px rgba(59, 130, 246, 0.3)' },
+          '100%': { boxShadow: '0 0 40px 10px rgba(59, 130, 246, 0.6)' },
+        }
       },
     },
   },

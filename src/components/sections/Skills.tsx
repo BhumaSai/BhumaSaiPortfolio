@@ -27,8 +27,9 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
 
   return (
     <div
-      className="group bg-white/90 dark:bg-gray-900/90 p-4 rounded-2xl border border-white/40 dark:border-gray-800/50 shadow-lg hover:shadow-blue-500/10"
+      className="group relative bg-white/60 dark:bg-gray-800/50 backdrop-blur-xl p-5 rounded-2xl border border-white/60 dark:border-white/10 shadow-lg hover:shadow-2xl hover:shadow-blue-500/15 hover:-translate-y-1 hover:border-blue-400/50 transition-all duration-300 overflow-hidden"
     >
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="flex items-center mb-3">
         <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white shadow-sm">
           {getIcon()}
@@ -83,7 +84,7 @@ const Skills: React.FC = () => {
     : skills.filter(skill => skill.category === activeCategory);
 
   return (
-    <section id="skills" className="skills py-24 relative overflow-hidden bg-[#fafbff] dark:bg-[#030712]">
+    <section id="skills" className="skills py-24 relative overflow-hidden bg-transparent">
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">

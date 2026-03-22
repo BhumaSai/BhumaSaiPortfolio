@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-white dark:bg-[#030712]">
+    <section id="contact" className="py-24 relative overflow-hidden bg-transparent">
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
@@ -116,8 +116,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:w-2/3">
-            <div className="p-5 sm:p-14 bg-white dark:bg-gray-900 rounded-[2.5rem] border border-white/40 dark:border-gray-800/50 shadow-2xl">
+          <div className="lg:w-2/3 w-full">
+            <div className="p-5 sm:p-14 bg-white/60 dark:bg-gray-800/40 backdrop-blur-3xl rounded-[2.5rem] border border-white/60 dark:border-white/10 shadow-2xl">
               {isSubmitted ? (
                 <div className="text-center py-10 sm:py-20">
                   <div className="inline-flex items-center justify-center w-20 h-20 sm:w-28 sm:h-28 bg-green-50 dark:bg-green-900/20 text-green-500 rounded-full mb-6 sm:mb-10 shadow-inner">

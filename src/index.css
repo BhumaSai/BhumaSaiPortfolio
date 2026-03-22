@@ -15,15 +15,18 @@
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   scroll-behavior: smooth;
+  @apply bg-slate-50 text-gray-900;
 }
 
-.responsive {
-  width: 100vw;
-  overflow: hidden;
-  text-wrap: inherit;
+.dark body {
+  @apply bg-[#030712] text-gray-100;
+}
+
+::selection {
+  @apply bg-blue-500/30;
 }
 
 .font-mono {
@@ -31,48 +34,26 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .dark .glass {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(17, 24, 39, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Aggressively reduce backdrop blur globally for performance */
-.backdrop-blur-sm,
-.backdrop-blur-md,
-.backdrop-blur-lg,
-.backdrop-blur-xl,
-.backdrop-blur-2xl,
-.backdrop-blur-3xl {
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
+/* Base custom classes to delay animations */
+.animation-delay-2000 {
+  animation-delay: 2s;
 }
 
-/* Performance: Isolate section rendering */
-section {
-  contain: content;
-}
-
-/* backgrounds */
-.hero {
-  background-image: repeating-linear-gradient(to right, rgba(0, 204, 255, 0.219) 2px, transparent 5px) !important;
-  background-size: 20px 20px;
-  box-shadow: inset 10px 10px 50px black;
-}
-
-.about {
-  background-image: radial-gradient(circle, rgba(77, 111, 143, 0.15), transparent);
-  background-size: 20px 20px;
-}
-
-.dark .about {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent);
-  background-size: 20px 20px;
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
 
 /* Hide scrollbar but keep functionality */
@@ -83,4 +64,16 @@ section {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.842);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(38, 123, 219, 0.5);
 }
